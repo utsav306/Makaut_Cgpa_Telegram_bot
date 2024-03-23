@@ -1,5 +1,12 @@
 const TelegramBot = require('node-telegram-bot-api');
 
+var http = require('http');
+http.createServer(function (req, res) {
+  res.write("I'm alive");
+  res.end();
+}).listen(8080);
+
+
 // Replace 'YOUR_TELEGRAM_BOT_TOKEN' with your actual bot token
 const bot = new TelegramBot('6607187978:AAFyLrXQOCtdg2lyqElu7FN0EevgbpaTwsg', { polling: true });
 
