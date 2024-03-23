@@ -6,9 +6,9 @@ http.createServer(function (req, res) {
   res.end();
 }).listen(8080);
 
-
+const token= process.env.BOT;
 // Replace 'YOUR_TELEGRAM_BOT_TOKEN' with your actual bot token
-const bot = new TelegramBot('6607187978:AAFyLrXQOCtdg2lyqElu7FN0EevgbpaTwsg', { polling: true });
+const bot = new TelegramBot(token, { polling: true });
 
 // Object to store user states
 const userState = {};
